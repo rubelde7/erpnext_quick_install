@@ -377,7 +377,7 @@ case "$erpnext_install" in
     "yes" | "y")
     sleep 2
     # Setup supervisor and nginx config
-    bench get-app erpnext --branch $bench_version && \
+    bench get-app https://github.com/rubelde7/erpnext.git --branch $bench_version && \
     bench --site $site_name install-app erpnext
     sleep 1
 esac
